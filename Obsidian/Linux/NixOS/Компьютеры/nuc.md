@@ -110,7 +110,7 @@ MAX устанавливает install-max.service, но обновляется 
 
 ## Ghostty и локальная сеть
 
-JetBrains Mono 12, чёрный фон, окно 170 × 45; конфигурация /etc/ghostty/nuc.conf.
+JetBrains Mono 12, чёрный фон, окно 170 × 45; конфигурация ~/.config/ghostty/config.ghostty.
 
 Записи hosts: zet → 192.168.1.59, nuc → 192.168.1.149. Они не назначают статический IP, сеть управляется NetworkManager.
 
@@ -130,3 +130,7 @@ nix-update --upgrade
 Запускать от nikolaev, без sudo. После обновления ядра или драйвера перезагрузиться. Lock-файл и локальные правки сохранять осознанно: [[Linux/NixOS/Обновление и откат|подробности]].
 
 Источник: [профиль nuc](https://github.com/nikolaevmpf/gnome-config/tree/main/hosts/nuc), [общий flake](https://github.com/nikolaevmpf/gnome-config/blob/main/flake.nix).
+
+## Переход на Home Manager
+
+С 12 октября все пять профилей используют Home Manager для пользователя nikolaev. Инструкции первого применения, резервные копии Ghostty и расположение настроек: [[Linux/NixOS/Home Manager|Home Manager]]. Диски, драйверы и системные службы остаются в NixOS. Обновление выполняется через nix-update.
