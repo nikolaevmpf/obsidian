@@ -37,7 +37,7 @@
 
 ## Почему настройки не применились
 
-Системный dconf задаёт **значения по умолчанию**. Пользовательские значения из старого сеанса имеют приоритет.
+Home Manager применяет выбранные dconf-ключи к пользователю nikolaev при активации. Личные изменения этих ключей могут быть перезаписаны следующим обновлением.
 
 Проверять и менять в собственной сессии GNOME, **без sudo**:
 
@@ -63,15 +63,15 @@ gsettings reset org.gnome.desktop.interface color-scheme
 
 | Машина | Исходный файл | Системный файл |
 | --- | --- | --- |
-| zet | hosts/zet/ghostty.conf | /etc/ghostty/zet.conf |
-| nuc | hosts/nuc/ghostty.conf | /etc/ghostty/nuc.conf |
-| 02i0132 | hosts/02i0132/ghostty.conf | /etc/ghostty/02i0132.conf |
-| vm | Отдельного файла в профиле нет | Общий Ghostty |
+| zet | home/hosts/zet-ghostty.conf | ~/.config/ghostty/config.ghostty |
+| nuc | home/hosts/nuc-ghostty.conf | ~/.config/ghostty/config.ghostty |
+| 02i0132 | home/hosts/02i0132-ghostty.conf | ~/.config/ghostty/config.ghostty |
+| vm | home/hosts/vm-ghostty.conf | ~/.config/ghostty/config.ghostty |
 
-Физические профили: JetBrains Mono 12, фон #000000, окно 170 × 45, блочный курсор, без мигания. User-служба ghostty-host-config добавляет config-file в пользовательский конфиг, не заменяя его целиком.
+Все профили: JetBrains Mono 12, фон #000000, окно 170 × 45, блочный курсор, без мигания. Home Manager управляет ~/.config/ghostty/config и config.ghostty; существующие файлы сохраняются в резервные копии. Старый ghostty-host-config удалён.
 
 ~~~bash
-systemctl --user status ghostty-host-config --no-pager
+systemctl status home-manager-nikolaev.service --no-pager
 ~~~
 
 ## Программы по профилям
@@ -140,3 +140,7 @@ virsh -c qemu:///system net-start default
 Не запускать net-start повторно для уже активной сети. Если default отсутствует, её нужно определить отдельно. В virt-manager выбирать **QEMU/KVM system**. Образы по умолчанию — /var/lib/libvirt/images; Data или games автоматически не используются.
 
 Источники: [modules/gnome.nix](https://github.com/nikolaevmpf/gnome-config/blob/main/modules/gnome.nix), [профили](https://github.com/nikolaevmpf/gnome-config/tree/main/hosts).
+
+## Переход на Home Manager
+
+С 12 октября все пять профилей используют Home Manager для пользователя nikolaev. Инструкции первого применения, резервные копии Ghostty и расположение настроек: [[Linux/NixOS/Home Manager|Home Manager]]. Диски, драйверы и системные службы остаются в NixOS. Обновление выполняется через nix-update.
