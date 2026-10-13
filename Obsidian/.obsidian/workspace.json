@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Network/Обзор.md",
+                "file": "Прикупить.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Обзор"
+              "title": "Прикупить"
             }
           }
         ]
@@ -191,6 +191,25 @@
   },
   "active": "d2ea51e85f6924f2",
   "lastOpenFiles": [
+    "Задачи.md",
+    "Содержание.md",
+    "Прикупить.md",
+    "Windows/Activation.md",
+    "Windows/Обзор.md",
+    "Linux/Обзор.md",
+    "Рецепты/Блины.md",
+    "Рецепты/Вафли.md",
+    "Рецепты/Маринованная капуста.md",
+    "Рецепты/Малосольные огурчики.md",
+    "Рецепты/Луковая заправка.md",
+    "Рецепты/Маринованный лук.md",
+    "Рецепты/Мороженное.md",
+    "Рецепты/Сердечки.md",
+    "Рецепты/Плов.md",
+    "Linux/Network/Systemd-networkd.md",
+    "Linux/Network/Netplan.md",
+    "Linux/Network/Disable ipv6 Arch linux.md",
+    "Linux/Network/Обзор.md",
     "Linux/Astra/Network.md",
     "Linux/Astra/Ansible.md",
     "Linux/Astra/Обзор.md",
@@ -198,26 +217,7 @@
     "Linux/NixOS/Компьютеры/02i0132.md",
     "Linux/NixOS/Компьютеры/Dell Latitude 3410.md",
     "Linux/NixOS/Обновление и откат.md",
-    "Linux/NixOS/Компьютеры/zet.md",
-    "Linux/NixOS/Обзор.md",
-    "Linux/NixOS/Применение профиля.md",
-    "Linux/NixOS/Установка.md",
-    "Linux/NixOS/GNOME и приложения.md",
-    "Linux/NixOS/Диагностика.md",
-    "Linux/NixOS/История проекта.md",
-    "Разное/Домофон.md",
-    "Linux/NixOS/Компьютеры/vm.md",
-    "Linux/NixOS/Компьютеры/nuc.md",
     "Linux/NixOS/Компьютеры",
-    "Nix/Компьютеры/zet.md",
-    "Nix/Компьютеры/vm.md",
-    "Nix/Компьютеры/nuc.md",
-    "Nix/Компьютеры/Dell Latitude 3410.md",
-    "Nix/Компьютеры/02i0132.md",
-    "Nix/Установка.md",
-    "Nix/Применение профиля.md",
-    "Nix/Обновление и откат.md",
-    "Nix/Обзор.md",
     "Nix/Компьютеры",
     "Nix"
   ]
